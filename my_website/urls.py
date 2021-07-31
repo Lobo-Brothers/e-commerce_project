@@ -19,8 +19,15 @@ from django.urls import path
 from pages.views import home_view
 from products.views import product_create_view
 
+from django.conf import settings            #Images stuff
+from django.conf.urls.static import static  #Images stuff
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view),
     path('sell/', product_create_view),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
