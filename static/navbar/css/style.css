@@ -85,27 +85,6 @@ button {
   text-shadow: 6px 8px 7px var(--shadow);
 }
 
-.search-container button {
-  background: #adffd1;
-  font-size: 0.9rem;
-  cursor: pointer;
-  padding: 6px 10px;
-  border: 1px solid var(--shadow);
-}
-
-.search-container input[type=text] {
-  font-size: 0.9rem;
-  padding: 6px;
-  border: 1px solid var(--shadow);
-  width: 450px;
-  background: #adffd1;
-}
-
-.search-container button:hover {
-  background: var(--shadow);
-  border-color: var(--highlight);
-}
-
 .nav-btns {
   display: none;
 }
@@ -145,6 +124,10 @@ button {
   margin: 0.7rem 0;
   padding: 1rem 0;
   text-align: center;
+}
+
+.search-container {
+  display: none;
 }
 
 .nav-link {
@@ -213,6 +196,29 @@ button {
     width: 100px;
     -webkit-transition: var(--transition);
     transition: var(--transition);
+  }
+  .search-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .search-container button {
+    background: #adffd1;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 6px 10px;
+    border: 1px solid var(--shadow);
+  }
+  .search-container input[type=text] {
+    font-size: 0.9rem;
+    padding: 6px;
+    border: 1px solid var(--shadow);
+    width: 450px;
+    background: #adffd1;
+  }
+  .search-container button:hover {
+    background: var(--shadow);
+    border-color: var(--highlight);
   }
   .nav-btns button:hover {
     opacity: 1;
