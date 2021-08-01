@@ -147,4 +147,117 @@ button {
 .showNav {
   width: 100%;
 }
+
+/***       media querys       ***/
+@media screen and (min-width: 500px) {
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+  .nav-item-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-item-side span {
+    color: #59826b;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+  }
+  .nav-item-side span:hover {
+    opacity: 0.7;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+  .nav-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-btns button {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.9;
+    padding: 0.4rem 0;
+    border-width: 0.5px;
+    border-style: solid;
+    margin: 0 0.5rem;
+    width: 100px;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+  }
+  .nav-btns button:hover {
+    opacity: 1;
+  }
+  .nav-btns button:first-child {
+    border-color: var(--shadow);
+    background: transparent;
+    color: var(--secondary);
+  }
+  .nav-btns button:first-child:hover {
+    border-color: var(--highlight);
+    background: var(--shadow);
+  }
+  .nav-btns button:nth-child(2) {
+    border-color: var(--shadow);
+    background: transparent;
+    color: var(--secondary);
+  }
+  .nav-btns button:nth-child(2):hover {
+    border-color: var(--highlight);
+    background: var(--shadow);
+  }
+  .nav-btns button:last-child {
+    border-color: transparent;
+    background: transparent;
+    color: var(--secondary);
+  }
+  .nav-btns button:last-child:hover {
+    border-color: var(--highlight);
+    background: var(--shadow);
+  }
+  .navbar-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem 0;
+  }
+  .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 !important;
+  }
+  .nav-item {
+    padding: 0;
+    margin: 0 0.8rem;
+  }
+  .nav-link {
+    margin: 0 2rem;
+    font-size: 1rem;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    color: #000;
+  }
+  .nav-link:hover {
+    text-shadow: none;
+    color: var(--secondary);
+  }
+}
 /*# sourceMappingURL=style.css.map */
