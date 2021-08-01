@@ -1,5 +1,78 @@
-<nav>
-    <ul>
-        <li>Home</li>
-    </ul>
-</nav>
+{% load static %} <!--Importante, con esto importamos los staticfiles para poder utilizarlos-->
+
+{% block css %} <!--Cuando se pone el block, da lugar a reemplazar en el base.html lo que corresponda-->
+<title>My website</title>
+<link rel="stylesheet" href="{% static 'navbar/css/style.css' %}">
+<!--Ponemos el directorio, el root directory es la carpeta static,
+seguimos poniendo el resto del path segun corresponda-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/f363b53072.js"></script>
+{% endblock %}
+
+<!--header-->
+<header class="header" id="home">
+    <!--navbar-->
+    <nav class="navbar container">
+        <a href="header.html" class="navbar-brand">
+            <i class="fas fa-bong"></i>
+            EBONGMERCE
+        </a>
+
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link">reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#product" class="nav-link">size guide</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#reviews" class="nav-link">gift cards</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#reviews" class="nav-link" id="shop-cart"><i class="fas fa-shopping-cart" title="cart"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-extra-content">
+            <div class="nav-btns">
+                <button type="button">
+                    <i class= "fas fa-user-circle"></i>
+                    Login
+                </button>
+                <button type="button">
+                    Sign up
+                </button>
+            </div>
+            <ul class="nav-icons">
+                <span class="center">
+                    <i class="fab fa-cc-visa" title="visa"></i>
+                </span>
+                <span class="center">
+                    <i class="fab fa-cc-mastercard" title="mastercard"></i>
+                </span>
+                <span class="center">
+                    <i class="fab fa-cc-paypal" title="paypal"></i>
+                </span>
+                <span class="center">
+                    <i class="fab fa-cc-diners-club" title="diners club"></i>
+                </span>
+            </ul>
+        </div>
+
+        <button type="button" class="navbar-toggler center" id="navbar-toggler">
+            <i class="fas fa-bars fa-fw"></i>
+        </button>
+    </nav>
+    <!--end navbar-->
+</header>
+<!--end header-->
+
+<!--js-->
+{% block js %}<script src="{% static 'navbar/javascript/script.js' %}"></script>{% endblock %}
+
+
