@@ -20,7 +20,7 @@ class ProductForm(forms.Form):
                     #'class': aca va una clase en el caso que la quieras usar
                     #'id': y aca la id
                     'rows': 5,
-                    'cols': 10,
+                    'cols': 20,
                     'placeholder': 'Describe your product :)'
 
             }
