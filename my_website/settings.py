@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     #My apps
     'products',
     'pages',
+    #Third Party Apps.
+    'mptt',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL   = '/media/'
 
 MEDIA_ROOT  = ((os.path.join(BASE_DIR, 'products/media/')))
+
+MPTT_ADMIN_LEVEL_INDENT = 20
