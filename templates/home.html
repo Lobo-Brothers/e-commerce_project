@@ -1,5 +1,56 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'homepage/css/style.css' %}">
+<script src="https://kit.fontawesome.com/f363b53072.js"></script>
+{% endblock %}
 
 {% block content %}
-<h1>Home page</h1>
+<body>
+
+    <div class="img-slider">
+        <div class="slide">
+            <img src="{% static 'homepage/images/jordan1.jpg' %}" alt="">
+            <div class="info">
+                <a href="#" class="slide-title">Sneakers</a>
+                <p>You can buy new sneakers and shoes here, always available and authentic.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{% static 'homepage/images/bapetee1.jpg' %}" alt="">
+            <div class="info">
+                <a href="#" class="slide-title">T-Shirts</a>
+                <p>Your t-shirts collection can be expanded with our shop.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{% static 'homepage/images/jean1.jpg' %}" alt="">
+            <div class="info">
+                <a href="#" class="slide-title">Bottoms</a>
+                <p>The most purchased jeans are here for you.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{% static 'homepage/images/asschoodie1.jpg' %}" alt="">
+            <div class="info">
+                <a href="#" class="slide-title">Hoodies</a>
+                <p>In our shop we brings you all type of hoodies for your style.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{% static 'homepage/images/outerwear1.jpg' %}" alt="">
+            <div class="info">
+                <a href="#" class="slide-title">Outerwear</a>
+                <p>You can choose a wide variety of jackets, vests and more outerwears.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="{% static 'homepage/images/accesories1.jpg' %}" alt="">
+            <div class="info">
+                <a href="#" class="slide-title">Accesories</a>
+                <p>We brings you new glasses, watches and all sort of accesories.</p>
+            </div>
+        </div>
+    </div>
+</body>
 {% endblock %}
