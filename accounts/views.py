@@ -14,3 +14,9 @@ def user_registration_view(request):
     
     context = {'form': form}
     return render(request, 'accounts/user_registration.html', context)
+
+def user_login_view(request):
+    form = 'hola'
+
+    context = {'form': form}
+    return render(request, 'accounts/user_login.html', context)

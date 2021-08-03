@@ -18,7 +18,7 @@ from django.urls import path
 
 from pages.views import home_view
 from products.views import product_create_view
-from accounts.views import user_registration_view
+from accounts.views import user_registration_view, user_login_view
 
 from django.conf import settings            #Images stuff
 from django.conf.urls.static import static  #Images stuff
@@ -27,7 +27,8 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin_panel'),
     path('', home_view, name='home_page'),
     path('sell/', product_create_view, name='create_product'),
-    path('register/', user_registration_view, name='registration')
+    path('register/', user_registration_view, name='registration'),
+    path('login/', user_login_view, name='login')
 ]
 
 if settings.DEBUG:
