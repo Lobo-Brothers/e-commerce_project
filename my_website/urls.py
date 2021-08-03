@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view),
     path('sell/', product_create_view),
+    path('register/', user_registration_view, name='user_registration')
 ]
 
 if settings.DEBUG:
