@@ -24,10 +24,10 @@ from django.conf import settings            #Images stuff
 from django.conf.urls.static import static  #Images stuff
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home_view),
-    path('sell/', product_create_view),
-    path('register/', user_registration_view)
+    path('admin/', admin.site.urls, name='admin_panel'),
+    path('', home_view, name='home_page'),
+    path('sell/', product_create_view, name='create_product'),
+    path('register/', user_registration_view, name='registration')
 ]
 
 if settings.DEBUG:
