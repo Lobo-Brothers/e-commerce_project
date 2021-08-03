@@ -1,0 +1,25 @@
+.img-slider {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 10px;
+}
+
+.img-slider .slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
+
+.img-slider img {
+  z-index: 1;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.img-slider .slide .info {
+  position: absolute;
+  top: 0;
+  padding: 15px 30px;
+}
+/*# sourceMappingURL=style-home.css.map */
