@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render
+
 from .forms import RegisterUserForm
 # Create your views here.
 

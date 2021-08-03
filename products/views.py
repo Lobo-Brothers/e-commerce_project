@@ -10,8 +10,6 @@ def product_create_view(request):
     if request.method == "POST":
         if my_form.is_valid():
             Product.objects.create(**my_form.cleaned_data)
-        else:
-            print(my_form.errors)
 
     context = {
         'form': my_form 
