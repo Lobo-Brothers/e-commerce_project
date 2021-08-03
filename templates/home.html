@@ -11,7 +11,7 @@
 <body>
 
     <div class="img-slider">
-        <div class="slide">
+        <div class="slide active">
             <img src="{% static 'homepage/images/jordan1.jpg' %}" alt="">
             <div class="info">
                 <a href="#" class="slide-title">Sneakers</a>
@@ -53,6 +53,16 @@
                 <p>We brings you new glasses, watches and all sort of accesories.</p>
             </div>
         </div>
+        <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
     </div>
+
+    {% block js %}<script src="{% static 'homepage/javascript/script-home.js' %}"></script>{% endblock %}
 </body>
 {% endblock %}
