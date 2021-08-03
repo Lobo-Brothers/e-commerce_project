@@ -1,0 +1,32 @@
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.img-slider {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 10px;
+}
+
+.img-slider .slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+}
+
+.img-slider img {
+  z-index: 1;
+  width: 100px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */
