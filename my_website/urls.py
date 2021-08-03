@@ -18,6 +18,7 @@ from django.urls import path
 
 from pages.views import home_view
 from products.views import product_create_view
+from accounts.views import user_registration_view
 
 from django.conf import settings            #Images stuff
 from django.conf.urls.static import static  #Images stuff
