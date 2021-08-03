@@ -8,7 +8,7 @@ def user_registration_view(request):
     form = RegisterUserForm()
 
     if request.method == 'POST':
-        form = UserCreationForm(request,POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
     
