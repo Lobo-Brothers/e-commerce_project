@@ -18,15 +18,21 @@ from django.urls import path
 
 from pages.views import home_view
 from products.views import product_create_view
+from accounts.views import user_registration_view, user_login_view
 
 from django.conf import settings            #Images stuff
 from django.conf.urls.static import static  #Images stuff
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home_view),
-    path('sell/', product_create_view),
+    path('admin/', admin.site.urls, name='admin_panel_page'),
+    path('', home_view, name='home_page'),
+    path('sell/', product_create_view, name='create_product_page'),
+    path('register/', user_registration_view, name='registration_page'),
+    path('login/', user_login_view, name='login_page')
 ]
+
+'''Podemos hacer referencia a una url en especifico en el archivo html con {% url 'name' %} , siendo
+name el "name" correspondiente al link al que queremos redirigir'''
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

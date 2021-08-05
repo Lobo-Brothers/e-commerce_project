@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #My apps
     'products',
     'pages',
+    'accounts',
     #Third Party Apps.
     'mptt',
 ]
