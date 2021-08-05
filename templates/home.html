@@ -3,12 +3,12 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'homepage/css/style-home.css' %}">
+<link rel="stylesheet" href="{% static 'homepage/css/estilo.css' %}">
 <script src="https://kit.fontawesome.com/f363b53072.js"></script>
 {% endblock %}
 
 {% block content %}
-<body>
+
 
     <div class="img-slider">
         <div class="slide active">
@@ -64,5 +64,5 @@
     </div>
 
     {% block js %}<script src="{% static 'homepage/javascript/script-home.js' %}"></script>{% endblock %}
-</body>
+
 {% endblock %}
