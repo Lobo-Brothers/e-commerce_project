@@ -100,6 +100,8 @@
     height: 375px;
   }
   .img-slider .slide .info {
+    position: absolute;
+    top: 0;
     padding: 10px 25px;
   }
   .img-slider .slide .info h2 {
