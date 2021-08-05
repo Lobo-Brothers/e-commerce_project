@@ -31,9 +31,6 @@ urlpatterns = [
     path('login/', user_login_view, name='login_page')
 ]
 
-'''Podemos hacer referencia a una url en especifico en el archivo html con {% url 'name' %} , siendo
-name el "name" correspondiente al link al que queremos redirigir'''
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
