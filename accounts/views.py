@@ -12,13 +12,7 @@ def user_registration_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(user_login_view)
+            return redirect('/accounts/login')
     
     context = {'form': form}
     return render(request, 'registration/user_registration.html', context)
-
-def user_login_view(request):
-    form = 'hola'
-
-    context = {'form': form}
-    return render(request, 'registration/user_login.html', context)
