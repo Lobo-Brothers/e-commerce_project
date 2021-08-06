@@ -29,7 +29,6 @@ urlpatterns = [
     path('sell/', product_create_view, name='create_product_page'),
 
     # Accounts app
-    path('login/', user_login_view, name='login_page'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/register/', user_registration_view, name='registration_page')
 ]
