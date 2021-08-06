@@ -15,10 +15,10 @@ def user_registration_view(request):
             return redirect(user_login_view)
     
     context = {'form': form}
-    return render(request, 'accounts/user_registration.html', context)
+    return render(request, 'registration/user_registration.html', context)
 
 def user_login_view(request):
     form = 'hola'
 
     context = {'form': form}
-    return render(request, 'accounts/user_login.html', context)
+    return render(request, 'registration/user_login.html', context)
