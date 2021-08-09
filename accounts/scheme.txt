@@ -3,3 +3,10 @@ Accounts
         Adds a username, email, and password to the database.
     Login
         Lets the user login, and logout from the website.
+    Profile
+        Address
+        Whatsapp
+        Telegram
+        My orders
+        Preferred Currency
+        Sizes(Shoes, t-shirt, trousers)
