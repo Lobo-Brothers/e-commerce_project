@@ -15,4 +15,4 @@ def user_registration_view(request):
             return redirect('/login/')
     
     context = {'form': form}
-    return render(request, 'registration/user_registration.html', context)
+    return render(request, 'accounts/user_registration.html', context)
