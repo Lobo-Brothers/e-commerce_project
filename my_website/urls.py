@@ -18,7 +18,9 @@ from django.urls import path, include
 
 from pages.views import home_view
 from products.views import product_create_view
+
 from accounts.views import user_registration_view
+from django.contrib.auth import views as auth_views
 
 from django.conf import settings            #Images stuff
 from django.conf.urls.static import static  #Images stuff
@@ -29,8 +31,9 @@ urlpatterns = [
     path('sell/', product_create_view, name='create_product_page'),
 
     # Accounts app
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/register/', user_registration_view, name='registration_page')
+    path('register/', user_registration_view, name='registration_page'),
+    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 ]
 
 '''Podemos hacer referencia a una url en especifico en el archivo html con {% url 'name' %} , siendo
