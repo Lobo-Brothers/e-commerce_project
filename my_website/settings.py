@@ -140,3 +140,5 @@ MEDIA_URL   = '/media/' #tu vieja
 MEDIA_ROOT  = ((os.path.join(BASE_DIR, 'products/media/'))) #Root directory de las imagenes de los productos
 
 MPTT_ADMIN_LEVEL_INDENT = 20 #Pixeles de indent de las categorias en el panel del admin
+
+LOGOUT_REDIRECT_URL = 'home_page'
