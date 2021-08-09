@@ -31,9 +31,9 @@ urlpatterns = [
     path('sell/', product_create_view, name='create_product_page'),
 
     # Accounts app
-    path('register/', user_registration_view, name='registration_page'),
+    path('register/', user_registration_view, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='accounts/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='accounts/logout.html'), name='logout'),
 ]
 
 '''Podemos hacer referencia a una url en especifico en el archivo html con {% url 'name' %} , siendo
