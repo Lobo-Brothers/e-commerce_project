@@ -3,12 +3,24 @@
 <form method='POST', action=''>
     {% csrf_token %}
 
-   {{form.username.label }}: {{ form.username }} <br><br>
+   {{ form.username.label }}: {{ form.username }} <br>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.<br>
    {{ form.email.label }}: {{ form.email }} <br><br>
-   {{ form.password1.label }}: {{ form.password1 }} <br><br>
-   {{ form.password2.label }}: {{ form.password2 }} <br><br>
+   {{ form.password1.label }}: {{ form.password1 }} 
+   <br>Your password can’t be too similar to your other personal information.
+   <br>Your password must contain at least 8 characters.
+   <br>Your password can’t be a commonly used password.
+   <br>Your password can’t be entirely numeric.
+   <br>{{ form.password2.label }}: {{ form.password2 }}
+   <br>Enter the same password as before, for verification.
+
 <br>
     <input type="submit" value='Save' />
 </form>
+
+{% if messages %}
+{% for message in messages %}
+    {{ message }}
+{% endfor %}
+{% endif %}
 
 {% endblock %}

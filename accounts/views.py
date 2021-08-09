@@ -18,6 +18,9 @@ def user_registration_view(request):
             form.save()
             messages.success(request, 'Account created :)')
             return redirect('/login/')
-            
+        else:
+            messages.error(request, 'Error, please check that all fields are correct.')
+            return redirect('/register')
+
     context = {'form': form}
     return render(request, 'accounts/user_registration.html', context)
