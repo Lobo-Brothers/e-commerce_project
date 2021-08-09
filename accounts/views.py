@@ -12,7 +12,7 @@ def user_registration_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login/')
+            return redirect('/login/')
     
     context = {'form': form}
     return render(request, 'registration/user_registration.html', context)
