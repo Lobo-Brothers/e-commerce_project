@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'products',
     'pages',
     'accounts',
+    'profiles',
     #Third Party Apps.
     'mptt',
+    'django_countries',
 ]
 
 MIDDLEWARE = [
