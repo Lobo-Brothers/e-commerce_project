@@ -18,9 +18,8 @@
 </form>
 
 {% if messages %}
-{% for message in messages %}
-    {{ message }}
-{% endfor %}
+    {% for message in messages %}
+    {% endfor %}
 {% endif %}
 
 {% endblock %}

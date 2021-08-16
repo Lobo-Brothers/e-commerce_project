@@ -8,11 +8,6 @@
 {% block content %}
 <div class="log-container">
   <h2 class="log-title"><i class="fas fa-dragon"></i>Log In</h2>
-{% if messages %}
-{% for message in messages %}
-{{ message }}
-{% endfor %}
-{% endif %}
 <form method="post" class="log-text">
   {% csrf_token %}
   {{ form.username.label }}: {{ form.username }} <br> <br>
@@ -20,4 +15,16 @@
   <button type="submit" class="log-btn">Log In</button>
 </form>
 </div>
+
+{% if messages %}
+  {% for message in messages %}
+  <div class="alert show">
+    <span class="dot-not"><i class="fas fa-dot-circle"></i></span>
+    <span class="msg">{{ message }}</span>
+    <span class="close-btn">
+        <button class="not-cls"><i class="fas fa-times"></i></button>
+    </span>
+  </div>
+  {% endfor %}
+{% endif %}
 {% endblock %}

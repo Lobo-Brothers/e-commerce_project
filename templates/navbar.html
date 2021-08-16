@@ -84,22 +84,10 @@ seguimos poniendo el resto del path segun corresponda-->
     </nav>
 
     {% if request.user.is_authenticated %}
-
-    <div class="alert show">
-        <span class="dot-not"><i class="fas fa-dot-circle"></i></span>
-        <span class="msg"> {{ message }}</span>
-        <span class="close-btn">
-            <button class="not-cls"><i class="fas fa-times"></i></button>
-        </span>
-    </div>
-    {% endif %}
-
-    {% if messages %}
-        {% for message in messages %}
-
-    
-    {% endfor %}
-
+        {% if messages %}
+            {% for message in messages %}
+            {% endfor %}
+        {% endif %}
     {% endif %}
 
 </header>
