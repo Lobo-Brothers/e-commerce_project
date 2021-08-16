@@ -19,9 +19,6 @@ from django.urls import path, include
 from pages.views import home_view
 from products.views import product_create_view
 
-from accounts.views import user_registration_view
-from django.contrib.auth import views as auth_views
-
 from profiles.views import profile_edit_view, billing_address_view
 
 from django.conf import settings            #Images stuff
