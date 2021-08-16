@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from .forms import ProfileForm, BillingForm
-from .models import BillingAddress, Profile
+from .models import Billaddress, Profile
 
 def profile_edit_view(request):
     my_form = ProfileForm(request.POST)
@@ -24,7 +24,7 @@ def billing_address_view(request):
         my_form = BillingForm(request.POST)
         if my_form.is_valid():
             print(my_form.cleaned_data)
-            BillingAddress.objects.create(**my_form.cleaned_data, belongs_to=request.user.username)
+            Billaddress.objects.create(**my_form.cleaned_data, belongs_to=request.user.username)
 
     context = {
         'form': my_form
