@@ -1,5 +1,4 @@
 from django import forms
-from django.db.models import query
 from django.forms.widgets import Select
 from django_countries.fields import CountryField
 
