@@ -102,6 +102,13 @@ button{
 }  ***/
 
   /***       log in style       ***/
+.signup-container{
+  position: absolute;
+  left: 40%;
+  top: 100px;
+  margin: 5px;
+}
+  /***       log in style       ***/
 .log-container{
   position: absolute;
   left: 40%;
