@@ -5,7 +5,7 @@ from .forms import ProfileForm, BillingForm
 from .models import Billaddress, Profile
 
 def profile_edit_view(request):
-    my_form = ProfileForm(request.POST)
+    my_form = ProfileForm(request.POST, user=request.user)
 
     if request.method == 'POST':
         if my_form.is_valid():
