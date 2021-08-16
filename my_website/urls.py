@@ -31,12 +31,8 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin_panel_page'),
     path('', home_view, name='home_page'),
     path('sell/', product_create_view, name='create_product_page'),
-
     # Accounts app
-    path('register/', user_registration_view, name='register'),
-    path('login/', auth_views.LoginView.as_view(template_name='accounts/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='accounts/logout.html'), name='logout'),
-
+    path('', include('accounts.urls')),
     # Profiles app
     path('profile/edit/', profile_edit_view, name='profile_edit'),
     path('profile/billing', billing_address_view, name='billing_edit')
