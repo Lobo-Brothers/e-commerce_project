@@ -18,5 +18,12 @@ const icon = document.getElementById('search-btn');
 const search = document.getElementById('search');
 
 icon.onclick = function(){
-    search.classList.toggle('active')
+    search.classList.toggle('active');
 }
+
+// sticky navbar
+
+window.addEventListener('scroll', function(){
+    var header = document.getElementById('navbar');
+    header.classList.toggle('sticky', window.scrollY > 0);
+})

@@ -10,6 +10,7 @@ from django.contrib import messages
 # Create your views here.
 
 def user_registration_view(request):
+    form = RegisterUserForm(request.POST)
 
     if request.method == 'POST':
         form = RegisterUserForm(request.POST)

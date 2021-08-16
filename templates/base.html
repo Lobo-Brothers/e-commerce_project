@@ -8,6 +8,7 @@
     <body>
         {% include 'navbar.html' %} <!--El include "importa" el archivo html-->
         {% block content %} <!--Lo de aca puede ser reemplazado con otro % block content % en el .html--> {% endblock %}
+        {% include 'footer.html' %}
     </body>
 
     {% block js %}<!--Lo mismo aca, esto se reemplaza poniendo % block js % en el archivo html-->{% endblock %}
