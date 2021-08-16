@@ -29,7 +29,141 @@ button{
   cursor: pointer;
 }
 
+
+          /***       NOTIFICATIONS & LOGGED USERS       ***/
+
+
+
+
+
+
+  /***       notifications       ***/
+.alert{
+  position: fixed;
+  text-align: center;
+  line-height: 300%;
+  font-size: 0.9rem;
+  z-index: 5;
+  right: 0;
+  top: 113px;
+  width: 300px;
+  height: 45px;
+  margin: 20px;
+  transition: var(--transition);
+  background: var(--primary);
+  border-radius: 4px;
+  border: 1px solid var(--highlight);
+}
+.alert button{
+  position: absolute;
+  right: 5px;
+  color: var(--secondary);
+  margin: 12px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary);
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+.alert button:hover{
+  background: var(--shadow);
+  border-color: var(--highlight);
+}
+.alert .dot-not{
+  position: absolute;
+  top: 2px;
+  left: 35px;
+  font-size: 1.2rem;
+  color: var(--highlight);
+}
+.alert .msg{
+  color: var(--secondary);
+}
+/**.alert.show{
+  animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide{
+  0%{
+    transform: trasnlateX(100%);
+  }
+  40%{
+    transform: trasnlateX(-10%);
+  }
+  80%{
+    transform: trasnlateX(0%);
+  }
+  100%{
+    transform: trasnlateX(-10%);
+  }
+}
+.alert.hide{
+  display: none;
+}  ***/
+
+  /***       log in style       ***/
+.log-container{
+  position: absolute;
+  left: 40%;
+  top: 100px;
+  margin: 50px;
+}
+.log-container .log-title{
+  text-align: center;
+  color: var(--secondary);
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.log-container .log-title i{
+  text-align: left;
+  margin: 10px;
+}
+.log-container .log-btn{
+  position: absolute;
+  background: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.9;
+  left: 65px;
+  padding: 0.4rem 0;
+  border-width: 0.5px;
+  border-style: solid;
+  margin: 0 0.5rem;
+  width: 100px;
+  transition: var(--transition);
+}
+.log-container .log-btn:hover{
+  background: var(--shadow);
+  border-color: var(--highlight);
+  opacity: 1;
+}
+.log-container .log-text{
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  color: var(--secondary);
+  font-size: 1.3rem;
+}
+.log-container .log-text input{
+  width: 200px;
+  left: 20px;
+  top: 8px;
+  padding: 6px;
+  font-size: 0.9rem;
+  position: relative;
+  border-color: var(--highlight);
+  background: #adffd1;
+}
+.log-container .log-text input:focus{
+  outline: none;
+}
+  
+          /***       END NAVBAR & MENUS       ***/
           
+
+
           /***       NAVBAR & MENUS       ***/
 
 
@@ -41,6 +175,7 @@ button{
 .container{
   width: 100%;
   margin: 0 auto;
+  transition: var(--transition);
 }
 .center{
   display: -webkit-box;
@@ -62,6 +197,8 @@ button{
           justify-content: stretch;
 }
 .navbar{
+  z-index: 3;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,20 +259,21 @@ button{
   margin-left: 50px;
   visibility: hidden;
 }
-.search-container i{
-  background: #adffd1;
-  font-size: 0.9rem;
-  cursor: pointer;
+.search-container button{
+  background: var(--primary);
+  font-size: 0.8rem;
   position: absolute;
+  opacity: 0.9;
   padding: 6px;
-  border: 1px solid var(--shadow);
+  color: var(--secondary);
+  border: 1px solid transparent;
   transition: var(--transition);
 }
 .search-container input{
   position: relative;
   font-size: 0.9rem;
   padding: 6px;
-  border: 1px solid var(--shadow);
+  border: 1px solid transparent;
   width: 20px;
   transition: var(--transition);
   background: #adffd1;
@@ -144,13 +282,15 @@ button{
 .search-container input.active{
   width: 200px;
   left: 25px;
+  border-color: var(--highlight);
 }
 .search-container input:focus{
-  outline: none
+  outline: none;
 }
-.search-container i:hover{
+.search-container button:hover, .search-container button:focus{
   background: var(--shadow);
   border-color: var(--highlight);
+  opacity: 1;
 }
 .nav-btns button:hover{
   opacity: 1;
@@ -220,9 +360,10 @@ button{
 }
 .navbar-logo{
   padding: 30px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--secondary);
+  transition: var(--transition);
 }
 .navbar-logo:hover{
   text-shadow: 6px 8px 7px var(--shadow);
@@ -233,20 +374,37 @@ button{
 .navbar-collapse{
   display: none;
 }
+  /***       sticky navbar       ***/
+.navbar.sticky{
+  width: 99%;
+  height: 7%;
+  margin: 8.5px;
+  border: 1px solid var(--shadow);
+}
+.navbar.sticky .navbar-logo{
+  font-size: 1.3rem;
+  padding: 25px;
+}
 
 @media all and (max-width: 992px){
   /***       navbar collapse style       ***/
 .search-container{
   display: none;
 }
+.navbar{
+  position: static;
+}
+.navbar-logo{
+  font-size: 1.2rem;
+}
 .navbar-side{
   display: none;
 }
 .navbar-toggler{
   display: flex;
-  z-index: 1000;
+  z-index: 4;
   padding: 0.2rem 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   border: none;
   background: none;
   color: var(--secondary);
@@ -255,7 +413,7 @@ button{
 }
 .navbar-collapse{
   display: flex;
-  z-index: 999;
+  z-index: 4;
   position: absolute;
   top: 0;
   right: 0;
@@ -308,9 +466,6 @@ button{
 
 
 
-.navbar-logo{
-  font-size: 1.5rem;
-}
 
   /***       image slider style       ***/
 .img-slider{
@@ -344,6 +499,7 @@ button{
 }
 .img-slider .slide .info{
   position: relative;
+  cursor: default;
   bottom: 500px;
   right: 500px;
   padding: 15px 30px;
@@ -379,14 +535,24 @@ button{
 }
 .img-slider .navigation .btn{
   background: var(--primary);
+  transition: var(--transition);
   width: 12px;
   height: 12px;
   margin: 10px;
+  opacity: 0.9;
   border-radius: 50%;
+  border: 1px solid transparent;
   cursor: pointer;
 }
+.img-slider .navigation .btn:hover{
+  border-color: var(--highlight);
+  background: var(--shadow);
+  opacity: 1; 
+}
 .img-slider .navigation .btn.active{
-  background: var(--highlight);
+  background: var(--shadow);
+  opacity: 1;
+  border-color: var(--highlight);
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
@@ -418,10 +584,12 @@ button{
   padding: 5px 10px;
   color: var(--secondary);
   border-radius: 2px;
+  cursor: default;
 }
 .card-header{
   padding: 30px 50px;
   text-align: center;
+  cursor: default;
 }
 .card-header img{
   max-height: 200px;
@@ -429,15 +597,18 @@ button{
 .product-title{
   font-size: 30px;
   color: var(--secondary);
+  cursor: default;
   line-height: 1;
 }
 .product-status{
   color: #59826b;
+  cursor: default;
 }
 .product-price{
   font-size: 30px;
   color: var(--secondary);
   margin: 20px 0;
+  cursor: default;
 }
 .card-footer{
   display: flex;
@@ -446,12 +617,14 @@ button{
 .card-btn{
   padding: 10px 40px;
   border-style: solid;
+  opacity: 0.9;
   border-color: var(--primary);
   font-family: inherit;
   border-radius: 5px;
   font-size: 16px;
   width: 100%;
   cursor: pointer;
+  transition: var(--transition);
 }
 .btn-primary{
   border-color: var(--shadow);
@@ -461,6 +634,7 @@ button{
 .btn-primary:hover{
   border-color: var(--highlight);
   background: var(--shadow);
+  opacity: 1;
 }
 .btn-secondary{
   color: #59826b;
@@ -501,6 +675,7 @@ button{
     max-width: 90vh;
   }
   .card-container{
+    display: flex;
     object-fit: cover;
     flex-wrap: nowrap;
     overflow: hidden;
@@ -534,6 +709,7 @@ button{
     display: flex;
     position: absolute;
     bottom: 200px;
+    opacity: 0.9;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -555,6 +731,7 @@ button{
   .arrows:hover{
     background: var(--shadow);
     border-color: var(--highlight);
+    opacity: 1;
   }
 }
           

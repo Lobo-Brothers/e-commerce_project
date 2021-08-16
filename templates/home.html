@@ -9,21 +9,25 @@
 
 {% block content %}
 
-{% if request.user.is_authenticated %}
-
-<h1>you are logged in</h1>
+    {% if request.user.is_authenticated %}
 
 
+    {% endif %}
 
-{% endif %}
+    {% if messages %}
 
-{% if messages %}
+        {% for message in messages %}
+        <div class="alert show">
+            <span class="dot-not"><i class="fas fa-dot-circle"></i></span>
+            <span class="msg">{{ message }}</span>
+            <span class="close-btn">
+                <button class="not-cls"><i class="fas fa-times"></i></button>
+            </span>
+        </div>
 
-{% for message in messages %}
-{{ message }}
-{% endfor %}
+    {% endfor %}
 
-{% endif %}
+    {% endif %}
 
     <div class="img-slider">
         <div class="slide active">

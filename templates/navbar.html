@@ -12,7 +12,7 @@ seguimos poniendo el resto del path segun corresponda-->
 <header class="header" id="home">
 
     <!--navbar-->
-    <nav class="navbar container">
+    <nav class="navbar container" id="navbar">
         <a href="{% url 'home_page' %}" class="navbar-logo">
             <i class="fas fa-dragon"></i>
             ECOMMERCE
@@ -22,7 +22,7 @@ seguimos poniendo el resto del path segun corresponda-->
             <div class="search-container">
                 <input type="text" placeholder="" id="search">
                 <p id="tip">Click to search...</p>
-                <i class="fa fa-search" alt="search button" id="search-btn"></i>
+                <button class="search-btn"><i class="fa fa-search" alt="search button" id="search-btn"></i></button>
             </div>
 
         <div class="navbar-collapse">
@@ -82,6 +82,25 @@ seguimos poniendo el resto del path segun corresponda-->
             <i class="fas fa-bars fa-fw"></i>
         </button>
     </nav>
+
+    {% if request.user.is_authenticated %}
+
+    <div class="alert show">
+        <span class="dot-not"><i class="fas fa-dot-circle"></i></span>
+        <span class="msg"> {{ message }}</span>
+        <span class="close-btn">
+            <button class="not-cls"><i class="fas fa-times"></i></button>
+        </span>
+    </div>
+    {% endif %}
+
+    {% if messages %}
+        {% for message in messages %}
+
+    
+    {% endfor %}
+
+    {% endif %}
 
 </header>
 
