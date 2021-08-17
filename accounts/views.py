@@ -10,6 +10,8 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
 
+#Profiles
+from profiles.models import Profile
 # Create your views here.
 
 def user_registration_view(request):
@@ -19,6 +21,8 @@ def user_registration_view(request):
         form = RegisterUserForm(request.POST)
         if form.is_valid():
             form.save()
+            #Profile.
+            Profile.objects.create(user=request.user)
             messages.success(request, 'Account created :)')
             return redirect('/login')
         else:
