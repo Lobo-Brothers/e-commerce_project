@@ -1,3 +1,4 @@
+from profiles.choices import TOP_SIZES
 from django.shortcuts import render
 
 from .forms import RegisterUserForm
@@ -6,12 +7,12 @@ from django.shortcuts import redirect
 
 from django.contrib import messages
 
+from profiles.models import Profile
+from django.contrib.auth.models import User
 #Login
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
 
-#Profiles
-from profiles.models import Profile
 # Create your views here.
 
 def user_registration_view(request):
@@ -21,9 +22,8 @@ def user_registration_view(request):
         form = RegisterUserForm(request.POST)
         if form.is_valid():
             form.save()
-            #Profile.
-            Profile.objects.create(user=request.user)
             messages.success(request, 'Account created :)')
+            Profile.objects.create(user=User.objects.get(username=form.cleaned_data.get('username')))
             return redirect('/login')
         else:
             messages.error(request, 'Error, please check that all fields are correct.')
