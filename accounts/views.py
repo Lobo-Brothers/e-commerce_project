@@ -1,4 +1,3 @@
-from django.contrib.auth import authenticate
 from django.shortcuts import render
 
 from .forms import RegisterUserForm
