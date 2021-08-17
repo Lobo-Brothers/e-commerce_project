@@ -5,14 +5,8 @@ from .forms import ProfileForm, BillingForm
 from .models import Billaddress, Profile
 
 def profile_view(request):
-    profile = Profile.objects.get(user=request.user)
 
-    context = {
-        'name'          : profile.name_and_last_name,
-        'date_created'  : profile.date_created
-    }
-
-    return render(request, 'profiles/profile.html', context)
+    return render(request, 'profiles/profile.html')
 
 def profile_edit_view(request):
     my_form = ProfileForm(request.POST, user=request.user)
