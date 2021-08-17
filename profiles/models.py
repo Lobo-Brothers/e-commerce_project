@@ -14,7 +14,7 @@ class Profile(models.Model):
     date_created        = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.user}, {self.name}'
+        return f'{self.user}'
 
 class Billaddress(models.Model):
     user                = models.ForeignKey(User, on_delete=models.CASCADE)
