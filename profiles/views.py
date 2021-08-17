@@ -1,8 +1,13 @@
+from typing import ContextManager
 from django.shortcuts import render
 
 # Create your views here.
 from .forms import ProfileForm, BillingForm
 from .models import Billaddress, Profile
+
+def profile_view(request):
+
+    return render(request, 'profiles/profile.html')
 
 def profile_edit_view(request):
     my_form = ProfileForm(request.POST, user=request.user)
