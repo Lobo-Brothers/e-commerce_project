@@ -17,12 +17,11 @@ class Profile(models.Model):
         return f'{self.user}, {self.name}'
 
 class Billaddress(models.Model):
-    user                = models.CharField(max_length=128)
-    name_and_last_name  = models.CharField(max_length=128)
-    postal_code         = models.CharField(max_length=64)
+    user                = models.ForeignKey(User, on_delete=models.CASCADE)
+    postal_code         = models.CharField(max_length=16)
     country             = CountryField()
     city                = models.CharField(max_length=64)
-    address             = models.CharField(max_length=64, null=True, blank=True)
+    address             = models.CharField(max_length=64)
 
     def __str__(self):
         return f'{self.address}, {self.city}, {self.postal_code}'
