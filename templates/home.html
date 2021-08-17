@@ -15,7 +15,13 @@
 
 {% if messages %}
     {% for message in messages %}
-        {{ message }}
+    <div class="alert show">
+      <span class="dot-not"><i class="fas fa-dot-circle"></i></span>
+      <span class="msg">{{ message }}</span>
+      <span class="close-btn">
+          <button class="not-cls"><i class="fas fa-times"></i></button>
+      </span>
+    </div>
     {% endfor %}
 {% endif %}
 
