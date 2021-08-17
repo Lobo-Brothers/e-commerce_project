@@ -25,7 +25,8 @@ from django.conf.urls.static import static  #Images stuff
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin_panel_page'),
     path('', home_view, name='home_page'),
-    path('sell/', product_create_view, name='create_product_page'),
+    #Products app
+    path('', include('products.urls')),
     # Accounts app
     path('', include('accounts.urls')),
     # Profiles app
