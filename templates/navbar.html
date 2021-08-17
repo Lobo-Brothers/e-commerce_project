@@ -83,13 +83,6 @@ seguimos poniendo el resto del path segun corresponda-->
         </button>
     </nav>
 
-    {% if request.user.is_authenticated %}
-        {% if messages %}
-            {% for message in messages %}
-            {% endfor %}
-        {% endif %}
-    {% endif %}
-
 </header>
 
               <!--js-->

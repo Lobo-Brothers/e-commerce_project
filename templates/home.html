@@ -10,11 +10,12 @@
 {% block content %}
 
     {% if request.user.is_authenticated %}
+        estas logeado
     {% endif %}
 
 {% if messages %}
     {% for message in messages %}
-
+        {{ message }}
     {% endfor %}
 {% endif %}
 
