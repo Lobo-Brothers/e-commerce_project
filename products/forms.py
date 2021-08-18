@@ -28,3 +28,4 @@ class ProductForm(forms.Form):
     )
     category    = TreeNodeChoiceField(queryset=Category.objects.all())
     price       = forms.DecimalField(initial=69.99)
+    featured    = forms.BooleanField()
