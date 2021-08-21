@@ -9,16 +9,20 @@ class RegisterUserForm(UserCreationForm):
     
     username    = forms.CharField(required=True, max_length=32, widget=forms.TextInput(attrs={
             'placeholder': 'Username',
-            'class': 'signup-labels'
+            'class': 'signup-labels',
+            'title': 'Enter your usarname.'
         }))
     email       = forms.EmailField(required=True, widget=forms.TextInput(attrs={
             'placeholder': 'your@email.com',
-            'class': 'signup-labels'
+            'class': 'signup-labels',
+            'title': 'Enter your email.'
         }))
     password1   = forms.CharField(required=True, max_length=64, widget=forms.PasswordInput(attrs={
-            'class': 'signup-labels'
+            'class': 'signup-labels',
+            'title': 'Your password must contain at least 8 characters.'
         }))
 
     password2   = forms.CharField(required=True, max_length=64, widget=forms.PasswordInput(attrs={
-            'class': 'signup-labels'
+            'class': 'signup-labels',
+            'title': 'Enter the same password as before, for verification.'
         }))

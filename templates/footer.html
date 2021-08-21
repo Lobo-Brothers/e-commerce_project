@@ -1,7 +1,44 @@
 {% load static %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'navbar/css/sty.css' %}">
+<link rel="stylesheet" href="{% static 'navbar/css/style.css' %}">
 <script src="https://kit.fontawesome.com/f363b53072.js"></script>
 {% endblock %}
 
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <ul>
+                    <li>Subscribe for exclusive offers, special events and a good tall fish tale or two.</li>
+                    <div class="newsletter">
+                        <input type="text" placeholder="Email" id="search">
+                        <button class="search-btn">sign up</button>
+                    </div>
+                </ul>
+            </div>
+            <div class="footer-col links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact us</h4>
+                <ul>
+                    <li>email <a href="#">info@ecommerce.com.ar</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i> <a href="https://github.com/lobinjeje"><i class="fab fa-github"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; ecommerce.ar | Design by lobinjeje
+    </div>
+</footer>

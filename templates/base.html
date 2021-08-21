@@ -5,11 +5,19 @@
         {% block css %}
         {% endblock %}
     </head>
+    
     <body>
         {% include 'navbar.html' %} <!--El include "importa" el archivo html-->
+    
+    
         {% block content %} <!--Lo de aca puede ser reemplazado con otro % block content % en el .html--> {% endblock %}
+    
+
+    <footer>
         {% include 'footer.html' %}
+    </footer>
     </body>
+    
 
     {% block js %}<!--Lo mismo aca, esto se reemplaza poniendo % block js % en el archivo html-->{% endblock %}
 </html>

@@ -111,8 +111,8 @@ button{
 .signup-container{
   position: absolute;
   left: 40%;
-  top: 200px;
-  margin: 5px;
+  top: 100px;
+  margin: 50px;
 }
 .signup-container .signup-title{
   text-align: center;
@@ -125,6 +125,49 @@ button{
 .signup-container .signup-title i{
   text-align: left;
   margin: 10px;
+}
+.signup-container .signup-text{
+  position: absolute;
+  line-height: 40px;
+  top: 100px;
+  left: 50px;
+  color: var(--secondary);
+  font-size: 1.3rem;
+}
+.signup-container .signup-btn{
+  position: absolute;
+  bottom: -30px;
+  background: var(--primary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.9;
+  left: 65px;
+  padding: 0.4rem 0;
+  border-width: 0.5px;
+  border-radius: 5px;
+  border-style: solid;
+  margin: 0 0.5rem;
+  width: 100px;
+  transition: var(--transition);
+}
+.signup-container .signup-btn:hover{
+  background: var(--shadow);
+  border-color: var(--highlight);
+  opacity: 1;
+}
+.signup-container input{
+  position: relative;
+  width: 200px;
+  left: 20px;
+  bottom: 9px;
+  padding: 6px;
+  font-size: 0.9rem;
+  border-color: var(--highlight);
+  background: #adffd1;
+}
+.signup-container .signup-text input:focus{
+  outline: none;
 }
   /***       log in style       ***/
 .log-container{
@@ -154,6 +197,7 @@ button{
   left: 65px;
   padding: 0.4rem 0;
   border-width: 0.5px;
+  border-radius: 5px;
   border-style: solid;
   margin: 0 0.5rem;
   width: 100px;
@@ -185,7 +229,7 @@ button{
   outline: none;
 }
   
-          /***       END NAVBAR & MENUS       ***/
+          /***       END NOTIFICATIONS & LOGGED USERS       ***/
           
 
 
@@ -260,6 +304,7 @@ button{
 }
 .nav-btns button{
   display: inline-block;
+  border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 300;
   opacity: 0.9;
@@ -286,6 +331,7 @@ button{
 }
 .search-container button{
   background: var(--primary);
+  border-radius: 5px;
   font-size: 0.8rem;
   position: absolute;
   opacity: 0.9;
@@ -299,6 +345,7 @@ button{
   font-size: 0.9rem;
   padding: 6px;
   border: 1px solid transparent;
+  border-radius: 5px;
   width: 20px;
   transition: var(--transition);
   background: #adffd1;
@@ -581,6 +628,7 @@ button{
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
+
   /***       cards       ***/
 .card-list{
   display: flex;
@@ -671,7 +719,6 @@ button{
 .card-footer .card-btn:first-child{
   margin-right: 15px;
 }
-
   /***       media queries       ***/
 @media all and (max-width: 992px){
   .img-slider{
@@ -698,6 +745,7 @@ button{
     display: flex;
     right: 100px;
     max-width: 90vh;
+    top: 150px;
   }
   .card-container{
     display: flex;
@@ -706,8 +754,7 @@ button{
     overflow: hidden;
   }
   .card{
-    object-fit: cover;
-    top: 150px;
+    top: 0px;
   }
   .card-header img{
     max-height: 100px;
@@ -758,6 +805,105 @@ button{
     border-color: var(--highlight);
     opacity: 1;
   }
+}
+  /***       footer style       ***/
+.footer{
+  background: var(--primary);
+  color: var(--secondary);
+  height: 400px;
+  position: relative;
+  top: 590px;
+}
+.footer-container{
+  border: 1px solid #adffd1;
+  height: 350px;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.footer-col{
+  width: 50%;
+  padding: 0 300px;
+}
+.footer-col h4{
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #59826b;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  color: #59826b;
+  transition: var(--transition);
+}
+.footer-col ul li a:hover{
+  opacity: 0.7;
+  padding-left: 5px;
+}
+.links{
+  position: relative;
+  top: 60px;
+  right: 60px;
+}
+.footer-bottom{
+  background: #adffd1;
+  color: #59826b;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 20px;
+}
+.footer-col i{
+  font-size: 20px;
+  letter-spacing: 20px;
+}
+.newsletter input{
+  border-color: var(--highlight);
+  border-radius: 5px;
+  padding: 6px;
+  font-size: 0.9rem;
+  width: 300px;
+  background: #adffd1;
+  outline: none;
+}
+.newsletter button{
+  border-radius: 5px;
+  margin-left: 15px;
+  border-style: solid;
+  opacity: 0.9;
+  font-weight: 300;
+  border-color: var(--primary);
+  font-family: inherit;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  background: transparent;
+  transition: var(--transition);
+  padding: 0.4rem 0;
+  border-width: 0.5px;
+  color: var(--secondary);
+}
+.newsletter button:hover{
+  border-color: var(--highlight);
+  background: var(--shadow);
+  opacity: 1;
 }
           
 
