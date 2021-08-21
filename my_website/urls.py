@@ -19,20 +19,18 @@ from django.urls import path, include
 from pages.views import home_view
 from products.views import product_create_view
 
-from profiles.views import profile_edit_view, billing_address_view
-
 from django.conf import settings            #Images stuff
 from django.conf.urls.static import static  #Images stuff
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin_panel_page'),
     path('', home_view, name='home_page'),
-    path('sell/', product_create_view, name='create_product_page'),
+    #Products app
+    path('', include('products.urls')),
     # Accounts app
     path('', include('accounts.urls')),
     # Profiles app
-    path('profile/edit/', profile_edit_view, name='profile_edit'),
-    path('profile/billing', billing_address_view, name='billing_edit')
+    path('', include('profiles.urls'))
 ]
 
 '''Podemos hacer referencia a una url en especifico en el archivo html con {% url 'name' %} , siendo

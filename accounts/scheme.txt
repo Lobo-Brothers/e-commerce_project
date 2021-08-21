@@ -1,5 +1,0 @@
-Accounts
-    Register
-        Adds a username, email, and password to the database.
-    Login
-        Lets the user login, and logout from the website.

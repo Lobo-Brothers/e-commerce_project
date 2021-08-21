@@ -4,6 +4,17 @@ from django.shortcuts import render
 from .forms import ProfileForm, BillingForm
 from .models import Billaddress, Profile
 
+def profile_view(request):
+    profile = Profile.objects.get(user=request.user)
+
+    context = {
+        'user'  : profile.user,
+        'name'  : profile.name_and_last_name,
+        'date'  : profile.date_created
+    }
+
+    return render(request, 'profiles/profile.html', context)
+
 def profile_edit_view(request):
     my_form = ProfileForm(request.POST, user=request.user)
 

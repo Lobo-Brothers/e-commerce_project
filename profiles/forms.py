@@ -4,7 +4,7 @@ from django_countries.fields import CountryField
 
 from django.core.validators import MaxValueValidator, MinValueValidator
 
-from .choices import TOP_SIZES
+from .choices import TOP_SIZES, SHOES_SIZES
 from .models import Billaddress, Profile
 
 class ProfileForm(forms.Form):
@@ -18,8 +18,8 @@ class ProfileForm(forms.Form):
         self.fields['address'] = forms.ModelMultipleChoiceField(queryset=Billaddress.objects.filter(user = self.username), widget=Select)
 
     name            = forms.CharField(max_length=64)
-    top_sizes       = forms.ChoiceField(choices = TOP_SIZES)
-    shoes_sizes     = forms.IntegerField(validators=[MinValueValidator(17), MaxValueValidator(48)])
+    top_sizes       = forms.ChoiceField(choices=TOP_SIZES)
+    shoes_sizes     = forms.MultipleChoiceField(choices=SHOES_SIZES, validators=[MinValueValidator(17), MaxValueValidator(48)], widget=Select)
 
 class BillingForm(forms.Form):
     class Meta:

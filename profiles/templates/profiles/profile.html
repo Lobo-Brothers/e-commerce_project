@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br><br><br><br>
+{% if request.user.is_authenticated %}
+    User: {{ user }} <br>
+    Name: {% if name %} {{ name }} {% else %} Please, edit your profile and assign your name and last name. {% endif %} <br>
+    Date joined : {{ date }}
+{% else %}
+You are not logged in.
+{% endif %}
+{% endblock %}
