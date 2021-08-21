@@ -45,10 +45,10 @@ button{
   font-size: 0.9rem;
   z-index: 5;
   right: 0;
-  top: 113px;
-  width: 300px;
-  height: 45px;
-  margin: 20px;
+  top: 7rem;
+  width: 18.75rem;
+  height: 2.8rem;
+  margin: 1.25rem;
   transition: var(--transition);
   background: var(--primary);
   border-radius: 4px;
@@ -780,7 +780,7 @@ button{
     z-index: 1;
     display: flex;
     position: absolute;
-    bottom: 200px;
+    bottom: 12.5rem;
     opacity: 0.9;
     align-items: center;
     justify-content: center;
@@ -789,16 +789,16 @@ button{
     background: var(--primary);
     border-color: var(--shadow);
     border-radius: 100%;
-    font-size: 25px;
-    height: 30px;
-    width: 30px;
+    font-size: 1.6rem;
+    height: 1.8rem;
+    width: 1.8rem;
     transition: var(--transition);
   }
   .one{
-    left: 150px;
+    left: 9.3rem;
   }
   .two{
-    left: 980px;
+    left: 61.2rem;
   }
   .arrows:hover{
     background: var(--shadow);
@@ -810,9 +810,10 @@ button{
 .footer{
   background: var(--primary);
   color: var(--secondary);
-  height: 400px;
+  height: 25rem;
   position: relative;
-  top: 590px;
+  top: 37rem;
+  margin-top: 6rem;
 }
 .footer-container{
   border: 1px solid #adffd1;
