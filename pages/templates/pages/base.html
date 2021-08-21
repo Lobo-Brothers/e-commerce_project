@@ -2,19 +2,20 @@
 <html>
     <head>
         <meta name="viewport" content="width=device=width, initial-scale=1">
-        {% block css %}
-        {% endblock %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <script src="https://kit.fontawesome.com/f363b53072.js"></script>
     </head>
     
     <body>
-        {% include 'navbar.html' %} <!--El include "importa" el archivo html-->
+        {% include 'pages/navbar.html' %} <!--El include "importa" el archivo html-->
     
     
         {% block content %} <!--Lo de aca puede ser reemplazado con otro % block content % en el .html--> {% endblock %}
     
 
     <footer>
-        {% include 'footer.html' %}
+        {% include 'pages/footer.html' %}
     </footer>
     </body>
     

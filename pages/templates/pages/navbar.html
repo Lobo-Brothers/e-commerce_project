@@ -1,13 +1,3 @@
-{% load static %} <!--Importante, con esto importamos los staticfiles para poder utilizarlos-->
-
-{% block css %} <!--Cuando se pone el block, da lugar a reemplazar en el base.html lo que corresponda-->
-<link rel="stylesheet" href="{% static 'navbar/css/style.css' %}">
-<!--Ponemos el directorio, el root directory es la carpeta static,
-seguimos poniendo el resto del path segun corresponda-->
-<script src="https://kit.fontawesome.com/f363b53072.js"></script>
-{% endblock %}
-
-
 <!--header-->
 <header class="header" id="home">
 
@@ -83,8 +73,3 @@ seguimos poniendo el resto del path segun corresponda-->
     </nav>
 
 </header>
-
-              <!--js-->
-{% block js %}<script src="{% static 'navbar/javascript/scripts.js' %}"></script>{% endblock %}
-
-

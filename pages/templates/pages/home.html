@@ -1,12 +1,5 @@
-{% extends 'base.html' %}
-
+{% extends 'pages/base.html' %}
 {% load static %}
-
-{% block css %}
-<link rel="stylesheet" href="{% static 'navbar/css/style.css' %}">
-<script src="https://kit.fontawesome.com/f363b53072.js"></script>
-{% endblock %}
-
 {% block content %}
 <body>
     {% if request.user.is_authenticated %}
@@ -27,42 +20,42 @@
 
     <div class="img-slider">
         <div class="slide active">
-            <img src="{% static 'navbar/images/jordan1.jpg' %}" alt="">
+            <img src="{% static 'images/jordan1.jpg' %}" alt="">
             <div class="info">
                 <a href="#" class="slide-title">Sneakers</a>
                 <p>You can buy new sneakers and shoes here, always available and authentic.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'navbar/images/bapetee1.jpg' %}" alt="">
+            <img src="{% static 'images/bapetee1.jpg' %}" alt="">
             <div class="info">
                 <a href="#" class="slide-title">T-Shirts</a>
                 <p>Your t-shirts collection can be expanded with our shop.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'navbar/images/jean1.jpg' %}" alt="">
+            <img src="{% static 'images/jean1.jpg' %}" alt="">
             <div class="info">
                 <a href="#" class="slide-title">Bottoms</a>
                 <p>The most purchased jeans are here for you.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'navbar/images/asschoodie1.jpg' %}" alt="">
+            <img src="{% static 'images/asschoodie1.jpg' %}" alt="">
             <div class="info">
                 <a href="#" class="slide-title">Hoodies</a>
                 <p>In our shop we brings you all type of hoodies for your style.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'navbar/images/outerwear1.jpg' %}" alt="">
+            <img src="{% static 'images/outerwear1.jpg' %}" alt="">
             <div class="info">
                 <a href="#" class="slide-title">Outerwear</a>
                 <p>You can choose a wide variety of jackets, vests and more outerwears.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'navbar/images/accesories1.jpg' %}" alt="">
+            <img src="{% static 'images/accesories1.jpg' %}" alt="">
             <div class="info">
                 <a href="#" class="slide-title">Accesories</a>
                 <p>We brings you new glasses, watches and all sort of accesories.</p>
@@ -85,7 +78,7 @@
     <div class="card" id="card">
         <span class="card-tag">Pre-Order now</span>
         <div class="card-header">
-            <img src="{% static 'navbar/images/jordan2.jpg' %}">
+            <img src="{% static 'images/jordan2.jpg' %}">
         </div>
         <div class="card-body">
             <h4 class="product-title">Jordan 13 Flint</h4>
@@ -108,7 +101,7 @@
     <div class="card" id="card">
         <span class="card-tag">Pre-Order now</span>
         <div class="card-header">
-            <img src="{% static 'navbar/images/jean2.jpg' %}">
+            <img src="{% static 'images/jean2.jpg' %}">
         </div>
         <div class="card-body">
             <h4 class="product-title">Palace Moschino Jean</h4>
@@ -131,7 +124,7 @@
     <div class="card" id="card">
         <span class="card-tag">Pre-Order now</span>
         <div class="card-header">
-            <img src="{% static 'navbar/images/accesories2.jpg' %}">
+            <img src="{% static 'images/accesories2.jpg' %}">
         </div>
         <div class="card-body">
             <h4 class="product-title">Roque's Gold Chain</h4>
@@ -154,7 +147,7 @@
     <div class="card" id="card">
         <span class="card-tag">Pre-Order now</span>
         <div class="card-header">
-            <img src="{% static 'navbar/images/outerwear2.jpg' %}">
+            <img src="{% static 'images/outerwear2.jpg' %}">
         </div>
         <div class="card-body">
             <h4 class="product-title">Supreme The North Face</h4>
@@ -177,7 +170,7 @@
     <div class="card" id="card">
         <span class="card-tag">Pre-Order now</span>
         <div class="card-header">
-            <img src="{% static 'navbar/images/jordantee1.jpg' %}">
+            <img src="{% static 'images/jordantee1.jpg' %}">
         </div>
         <div class="card-body">
             <h4 class="product-title">Supreme Jordan Tee</h4>
@@ -200,7 +193,7 @@
     <div class="card" id="card">
         <span class="card-tag">Pre-Order now</span>
         <div class="card-header">
-            <img src="{% static 'navbar/images/bapehoodie1.jpg' %}">
+            <img src="{% static 'images/bapehoodie1.jpg' %}">
         </div>
         <div class="card-body">
             <h4 class="product-title">BAPE x XO Hoodie</h4>
@@ -236,6 +229,6 @@
         </script>
     </div>
 </body>
-    {% block js %}<script src="{% static 'navbar/javascript/script-home.js' %}"></script>{% endblock %}
+    {% block js %}<script src="{% static 'javascript/script-home.js' %}"></script>{% endblock %}
 
 {% endblock %}
