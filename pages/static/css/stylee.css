@@ -745,12 +745,12 @@ button{
 }
 .card-new{
   display: flex;
-  margin-top: 250px;
+  margin-top: 15.6rem;
 }
 .banner-new{
   color: var(--secondary);
   position: absolute;
-  bottom: -775px;
+  bottom: -48.3rem;
   margin: 0.6rem;
   left: 12.5rem;
   background: var(--primary);
@@ -779,12 +779,12 @@ button{
 }
 .card-off{
   display: flex;
-  margin-top: 250px;
+  margin-top: 15.6rem;
 }
 .banner-off{
   color: var(--secondary);
   position: absolute;
-  bottom: -1550px;
+  bottom: -96.6rem;
   margin: 0.6rem;
   left: 12.5rem;
   background: var(--primary);
@@ -816,7 +816,7 @@ button{
   font-size: 1.3rem;
   color: #59826b;
   cursor: default;
-  text-decoration: line-through 2px #8fb39e;
+  text-decoration: line-through 0.13rem #8fb39e;
 }
 .product-newprice{
   font-size: 1.87rem;
