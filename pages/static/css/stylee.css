@@ -743,6 +743,87 @@ button{
 .card-footer .card-btn:first-child{
   margin-right: 0.9rem;
 }
+.card-new{
+  display: flex;
+  margin-top: 250px;
+}
+.banner-new{
+  color: var(--secondary);
+  position: absolute;
+  bottom: -775px;
+  margin: 0.6rem;
+  left: 12.5rem;
+  background: var(--primary);
+  border-radius: 0.3rem;
+  width: 45%;
+}
+.banner-new::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -0.6rem;
+  background-color: #59826b;
+  height: 0.13rem;
+  box-sizing: border-box;
+  width: 6rem;
+}
+.banner-new::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+  background-color: #59826b;
+  height: 0.13rem;
+  box-sizing: border-box;
+  width: 8rem;
+}
+.card-off{
+  display: flex;
+  margin-top: 250px;
+}
+.banner-off{
+  color: var(--secondary);
+  position: absolute;
+  bottom: -1550px;
+  margin: 0.6rem;
+  left: 12.5rem;
+  background: var(--primary);
+  border-radius: 0.3rem;
+  width: 45%;
+}
+.banner-off::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -0.6rem;
+  background-color: #59826b;
+  height: 0.13rem;
+  box-sizing: border-box;
+  width: 6rem;
+}
+.banner-off::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+  background-color: #59826b;
+  height: 0.13rem;
+  box-sizing: border-box;
+  width: 8rem;
+}
+.product-oldprice{
+  margin: 1.3rem 0;
+  font-size: 1.3rem;
+  color: #59826b;
+  cursor: default;
+  text-decoration: line-through 2px #8fb39e;
+}
+.product-newprice{
+  font-size: 1.87rem;
+  color: var(--secondary);
+  margin: 1.3rem 0;
+  cursor: default;
+}
   /***       media queries       ***/
 @media all and (max-width: 992px){
   .img-slider{
