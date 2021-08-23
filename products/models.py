@@ -16,7 +16,7 @@ class Product(models.Model):
     category    = TreeForeignKey('Category', on_delete=models.CASCADE, null=True, blank=True)
     price       = models.DecimalField(decimal_places=2, max_digits=9)
     featured    = models.BooleanField(default=False)
-    preview     = models.CharField(default='Hidden', max_length=10, choices=PREVIEW_CHOICES)
+    preview     = models.CharField(default='3', max_length=10, choices=PREVIEW_CHOICES)
     
     def __str__(self):
         return self.title
