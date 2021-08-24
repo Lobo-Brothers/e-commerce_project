@@ -15,6 +15,21 @@ class CustomQuerySet(models.QuerySet):
     def get_accesories(self):
         return self.filter(category='accesory')
 
+    def get_hoodies(self):
+        return self.filter(category='hoodie')
+
+    def get_bottoms(self):
+        return self.filter(category='bottom')
+
+    def get_sneakers(self):
+        return self.filter(category='sneaker')
+
+    def get_outerwears(self):
+        return self.filter(category='outerwear')
+
+    def get_tshirts(self):
+        return self.filter(category='t-shirt')
+
     def random(self):
         random = self
         return random[randint(0, len(random) - 1)]
