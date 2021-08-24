@@ -54,13 +54,16 @@
                 <p>You can choose a wide variety of jackets, vests and more outerwears.</p>
             </div>
         </div>
+
         <div class="slide">
-            <img src="{% static 'images/accesories1.jpg' %}" alt="">
+            <img src="{{ product.get_accesories.on_slider.random.image.url }}" alt="">
             <div class="info">
                 <a href="#" class="slide-title">Accesories</a>
                 <p>We brings you new glasses, watches and all sort of accesories.</p>
             </div>
         </div>
+
+
         <div class="navigation">
             <div class="btn active"></div>
             <div class="btn"></div>
