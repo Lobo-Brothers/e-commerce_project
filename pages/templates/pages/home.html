@@ -101,123 +101,87 @@
     <div class="card-list" id="card-list">
         <h2 class="banner-card">Pre-Order now our next collection season</h2>
         <button class="arrows one" id="slide-left"><i class="fas fa-angle-left"></i></button>
-    <div class="card-container" id="card-container">
-        
-    <div class="card" id="card">
-        
-        <div class="card-header">
-            <img src="{% static 'images/jordan2.jpg' %}">
-        </div>
-        <div class="card-body">
-            <h4 class="product-title">Jordan 13 Flint</h4>
-            <p class="product-status">Ships in 3-4 days</p>
-            <h3 class="product-price">$120.00</h3>
-        </div>
-        <div class="card-footer">
-            <a href="#">
-                <button class="card-btn btn-secondary">
-                    Info
-                </button>
-            </a>
-            <a href="#">
-                <button class="card-btn btn-primary">
-                    Pre-order
-                </button>
-            </a>
+
+        <div class="card-container" id="card-container">
+            <div class="card" id="card">
+                <div class="card-header">
+                    <img src="{% static 'images/jordan2.jpg' %}">
+                </div>
+                <div class="card-body">
+                    <h4 class="product-title">Jordan 13 Flint</h4>
+                    <p class="product-status">Ships in 3-4 days</p>
+                    <h3 class="product-price">$120.00</h3>
+                </div>
+                <div class="card-footer">
+                    <a href="#">
+                        <button class="card-btn btn-secondary">
+                            Info
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button class="card-btn btn-primary">
+                            Pre-order
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-    </div>
-        <button class="arrows two" id="slide-right"><i class="fas fa-angle-right"></i></button>
-        <script type="text/javascript">
-            var buttonLeft = document.getElementById('slide-left');
-            var buttonRight = document.getElementById('slide-right');
     
-                buttonLeft.addEventListener('click', function(){
-                    document.getElementById('card-container').scrollLeft -= 180
-                })
-                buttonRight.addEventListener('click', function(){
-                    document.getElementById('card-container').scrollLeft += 180
-                })
-        </script>
+    <button class="arrows two" id="slide-right"><i class="fas fa-angle-right"></i></button>
+    <script type="text/javascript">
+        var buttonLeft = document.getElementById('slide-left');
+        var buttonRight = document.getElementById('slide-right');
+    
+            buttonLeft.addEventListener('click', function(){
+                document.getElementById('card-container').scrollLeft -= 180
+            })
+            buttonRight.addEventListener('click', function(){
+                document.getElementById('card-container').scrollLeft += 180
+            })
+    </script>
 
     <div class="card-new">
-        <h2 class="banner-new">New arrivals for your collection</h2>
-        <button class="arrows one" id="slide-left"><i class="fas fa-angle-left"></i></button>
-    <div class="card-container" id="card-container">
-    
-    <div class="card" id="card">
-    
-        <div class="card-header">
-            <img src="{% static 'images/jordantee1.jpg' %}">
-        </div>
-        <div class="card-body">
-            <h4 class="product-title">Supreme Jordan Tee</h4>
-            <p class="product-status">Ships in 3-4 days</p>
-            <h3 class="product-price">$300.00</h3>
-        </div>
-        <div class="card-footer">
-            <a href="#">
-                <button class="card-btn btn-secondary">
-                    Info
-                </button>
-            </a>
-            <a href="#">
-                <button class="card-btn btn-primary">
-                    Add to cart
-                </button>
-            </a>
-        </div>
-    </div>
-    <div class="card" id="card">
-    
-    <div class="card-header">
-        <img src="{% static 'images/outerwear2.jpg' %}">
-    </div>
-    <div class="card-body">
-        <h4 class="product-title">Supreme The North Face</h4>
-        <p class="product-status">Ships in 3-4 days</p>
-        <h3 class="product-price">$985.00</h3>
-    </div>
-    <div class="card-footer">
-        <a href="#">
-            <button class="card-btn btn-secondary">
-                Info
-            </button>
-        </a>
-        <a href="#">
-            <button class="card-btn btn-primary">
-                Add to cart
-            </button>
-        </a>
-    </div>
-    </div>
-    <div class="card" id="card">
-    
-        <div class="card-header">
-            <img src="{% static 'images/bapehoodie1.jpg' %}">
-        </div>
-        <div class="card-body">
-            <h4 class="product-title">BAPE x XO Hoodie</h4>
-            <p class="product-status">Ships in 3-4 days</p>
-            <h3 class="product-price">$787.00</h3>
-        </div>
-        <div class="card-footer">
-            <a href="#">
-                <button class="card-btn btn-secondary">
-                    Info
-                </button>
-            </a>
-            <a href="#">
-                <button class="card-btn btn-primary">
-                    Add to cart
-                </button>
-            </a>
+        <h2 class="banner-new">
+            New arrivals for your collection
+        </h2>
+        <button class="arrows one" id="slide-left">
+            <i class="fas fa-angle-left"></i>
+        </button>
+
+        <div class="card-container" id="card-container">
+            
+            <div class="card" id="card">
+                <div class="card-header">
+                    <img src="{% static 'images/jordantee1.jpg' %}">
+                </div>
+                <div class="card-body">
+                    <h4 class="product-title">
+                        Supreme Jordan Tee
+                    </h4>
+                    <p class="product-status">
+                        Ships in 3-4 days
+                    </p>
+                    <h3 class="product-price">
+                        $300.00
+                    </h3>
+                </div>
+                <div class="card-footer">
+                    <a href="#">
+                        <button class="card-btn btn-secondary">
+                            Info
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button class="card-btn btn-primary">
+                            Add to cart
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-    </div>
-    </div>
     <div class="card-off">
         <h2 class="banner-off">Special offers from the last collection</h2>
         <button class="arrows one" id="slide-left"><i class="fas fa-angle-left"></i></button>
