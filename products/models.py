@@ -19,22 +19,6 @@ class CustomQuerySet(models.QuerySet):
         random = self
         return random[randint(0, len(random) - 1)]
 
-class CustomManager(models.Manager):
-    def get_queryset(self):
-        return CustomQuerySet(self.model, using=self._db)
-
-    def on_slider(self):
-        return self.get_queryset().on_slider()
-
-    def on_preorder(self):
-        return self.get_queryset().on_preorder()
-
-    def get_accesories(self):
-        return self.get_queryset().get_accesories()
-    
-    def random(self):
-        return self.get_queryset().random()
-
         #Hacer esto me tomo una noche entera y una lata de speed
 
 
@@ -48,7 +32,7 @@ class Product(models.Model):
     preview         = models.CharField(default='hidden', max_length=10, choices=PREVIEW_CHOICES)
     custom_category = TreeForeignKey('Category', on_delete=models.CASCADE, null=True, blank=True)
 
-    objects     = CustomManager()
+    objects     = CustomQuerySet.as_manager()
     
     def __str__(self):
         return f'{self.category}, {self.title}'
