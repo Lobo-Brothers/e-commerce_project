@@ -20,35 +20,55 @@
 
     <div class="img-slider">
         <div class="slide active">
-            <img src="{% static 'images/jordan1.jpg' %}" alt="">
+            {% if product.get_sneakers.on_slider.random.image.url %}
+                <img src="{{ product.get_sneakers.on_slider.image }}" alt="">
+            {% else %}
+                <img src="{% static 'images/image_not_available.jpg' %}" alt="">
+            {% endif %}
             <div class="info">
                 <a href="#" class="slide-title">Sneakers</a>
                 <p>You can buy new sneakers and shoes here, always available and authentic.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'images/bapetee1.jpg' %}" alt="">
+            {% if product.get_tshirts.on_slider.random.image.url %}
+                <img src="{{ product.get_tshirts.on_slider.image }}" alt="">
+            {% else %}
+                <img src="{% static 'images/image_not_available.jpg' %}" alt="">
+            {% endif %}
             <div class="info">
                 <a href="#" class="slide-title">T-Shirts</a>
                 <p>Your t-shirts collection can be expanded with our shop.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'images/jean1.jpg' %}" alt="">
+            {% if product.get_bottoms.on_slider.random.image.url %}
+                <img src="{{ product.get_bottoms.on_slider.random.image.url }}" alt="">
+            {% else %}
+                <img src="{% static 'images/image_not_available.jpg' %}" alt="">
+            {% endif %}
             <div class="info">
                 <a href="#" class="slide-title">Bottoms</a>
                 <p>The most purchased jeans are here for you.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'images/asschoodie1.jpg' %}" alt="">
+            {% if product.get_hoodies.on_slider.random.image.url %}
+                <img src="{{ product.get_hoodies.on_slider.random.image.url }}" alt="">
+            {% else %}
+                <img src="{% static 'images/image_not_available.jpg' %}" alt="">
+            {% endif %}
             <div class="info">
                 <a href="#" class="slide-title">Hoodies</a>
                 <p>In our shop we brings you all type of hoodies for your style.</p>
             </div>
         </div>
         <div class="slide">
-            <img src="{% static 'images/outerwear1.jpg' %}" alt="">
+            {% if product.get_outerwears.on_slider.random.image.url %}
+                <img src="{{ product.get_outerwears.on_slider.random.image.url }}" alt="">
+            {% else %}
+                <img src="{% static 'images/image_not_available.jpg' %}" alt="">
+            {% endif %}
             <div class="info">
                 <a href="#" class="slide-title">Outerwear</a>
                 <p>You can choose a wide variety of jackets, vests and more outerwears.</p>
@@ -56,7 +76,11 @@
         </div>
 
         <div class="slide">
-            <img src="{{ product.get_accesories.on_slider.random.image.url }}" alt="">
+            {% if product.get_accesories.on_slider.random.image.url %}
+                <img src="{{ product.get_accesories.on_slider.random.image.url }}" alt="">
+            {% else %}
+                <img src="{% static 'images/image_not_available.jpg' %}" alt="">
+            {% endif %}
             <div class="info">
                 <a href="#" class="slide-title">Accesories</a>
                 <p>We brings you new glasses, watches and all sort of accesories.</p>
