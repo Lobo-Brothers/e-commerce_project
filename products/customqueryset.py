@@ -1,4 +1,7 @@
-class CustomQuerySet(models.QuerySet):
+from django.db.models import QuerySet
+from random import randint
+
+class CustomQuerySet(QuerySet):
 
     #Funciones para filtrar los productos dentro del template.
     def on_slider(self):
