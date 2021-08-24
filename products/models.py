@@ -2,7 +2,7 @@ from products.choices import CATEGORY_CHOICES, PREVIEW_CHOICES
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 
-from customqueryset import CustomQuerySet
+from .customqueryset import CustomQuerySet
 
 
 # Create your models here.
