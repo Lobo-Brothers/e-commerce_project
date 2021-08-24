@@ -32,7 +32,8 @@ class CustomQuerySet(models.QuerySet):
 
     def random(self):
         random = self
-        return random[randint(0, len(random) - 1)]
+        if len(random) > 0:
+            return random[randint(0, len(random) - 1)]
 
         #Hacer esto me tomo una noche entera y una lata de speed
 
