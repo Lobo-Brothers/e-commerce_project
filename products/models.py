@@ -6,6 +6,8 @@ from random import randint
 
 # Create your models here.
 class CustomQuerySet(models.QuerySet):
+
+    #Funciones para filtrar los productos dentro del template.
     def on_slider(self):
         return self.filter(preview='slider')
 
@@ -30,6 +32,8 @@ class CustomQuerySet(models.QuerySet):
     def get_tshirts(self):
         return self.filter(category='t-shirt')
 
+
+    #Esta funcion devuelve un producto aleatorio de la lista de productos del queryset
     def random(self):
         random = self
         if len(random) > 0:
