@@ -21,7 +21,7 @@
     <div class="img-slider">
         <div class="slide active">
             {% if product.get_sneakers.on_slider.random.image.url %}
-                <img src="{{ product.get_sneakers.on_slider.image }}" alt="">
+                <img src="{{ product.get_sneakers.on_slider.random.image.url }}" alt="">
             {% else %}
                 <img src="{% static 'images/image_not_available.jpg' %}" alt="">
             {% endif %}
@@ -32,7 +32,7 @@
         </div>
         <div class="slide">
             {% if product.get_tshirts.on_slider.random.image.url %}
-                <img src="{{ product.get_tshirts.on_slider.image }}" alt="">
+                <img src="{{ product.get_tshirts.on_slider.random.image.url }}" alt="">
             {% else %}
                 <img src="{% static 'images/image_not_available.jpg' %}" alt="">
             {% endif %}
