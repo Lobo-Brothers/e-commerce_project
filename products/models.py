@@ -1,9 +1,10 @@
-from products.choices import CATEGORY_CHOICES, PREVIEW_CHOICES
 from django.db import models
+
 from mptt.models import MPTTModel, TreeForeignKey
+from django.core.validators import MinValueValidator
 
 from .customqueryset import CustomQuerySet
-
+from products.choices import CATEGORY_CHOICES, PREVIEW_CHOICES
 
 # Create your models here.
 class Product(models.Model):
@@ -11,7 +12,7 @@ class Product(models.Model):
     image           = models.ImageField(upload_to='images')
     description     = models.TextField(blank=True, null=True)
     category        = models.CharField(max_length=16, choices=CATEGORY_CHOICES)
-    price           = models.DecimalField(decimal_places=2, max_digits=9)
+    price           = models.DecimalField(decimal_places=2, max_digits=9, validators=[MinValueValidator(0.01)])
     featured        = models.BooleanField(default=False)
     preview         = models.CharField(default='hidden', max_length=10, choices=PREVIEW_CHOICES)
     custom_category = TreeForeignKey('Category', on_delete=models.CASCADE, null=True, blank=True)
