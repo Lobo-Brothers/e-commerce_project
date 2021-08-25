@@ -20,8 +20,8 @@
 
     <div class="img-slider">
         <div class="slide active">
-            {% if product.get_sneakers.on_slider.random.image.url %}
-                <img src="{{ product.get_sneakers.on_slider.random.image.url }}" alt="">
+            {% if products.get_sneakers.on_slider.random.image.url %}
+                <img src="{{ products.get_sneakers.on_slider.random.image.url }}" alt="">
             {% else %}
                 <img src="{% static 'images/image_not_available.jpg' %}" alt="">
             {% endif %}
@@ -31,8 +31,8 @@
             </div>
         </div>
         <div class="slide">
-            {% if product.get_tshirts.on_slider.random.image.url %}
-                <img src="{{ product.get_tshirts.on_slider.random.image.url }}" alt="">
+            {% if products.get_tshirts.on_slider.random.image.url %}
+                <img src="{{ products.get_tshirts.on_slider.random.image.url }}" alt="">
             {% else %}
                 <img src="{% static 'images/image_not_available.jpg' %}" alt="">
             {% endif %}
@@ -42,8 +42,8 @@
             </div>
         </div>
         <div class="slide">
-            {% if product.get_bottoms.on_slider.random.image.url %}
-                <img src="{{ product.get_bottoms.on_slider.random.image.url }}" alt="">
+            {% if products.get_bottoms.on_slider.random.image.url %}
+                <img src="{{ products.get_bottoms.on_slider.random.image.url }}" alt="">
             {% else %}
                 <img src="{% static 'images/image_not_available.jpg' %}" alt="">
             {% endif %}
@@ -53,8 +53,8 @@
             </div>
         </div>
         <div class="slide">
-            {% if product.get_hoodies.on_slider.random.image.url %}
-                <img src="{{ product.get_hoodies.on_slider.random.image.url }}" alt="">
+            {% if products.get_hoodies.on_slider.random.image.url %}
+                <img src="{{ products.get_hoodies.on_slider.random.image.url }}" alt="">
             {% else %}
                 <img src="{% static 'images/image_not_available.jpg' %}" alt="">
             {% endif %}
@@ -64,8 +64,8 @@
             </div>
         </div>
         <div class="slide">
-            {% if product.get_outerwears.on_slider.random.image.url %}
-                <img src="{{ product.get_outerwears.on_slider.random.image.url }}" alt="">
+            {% if products.get_outerwears.on_slider.random.image.url %}
+                <img src="{{ products.get_outerwears.on_slider.random.image.url }}" alt="">
             {% else %}
                 <img src="{% static 'images/image_not_available.jpg' %}" alt="">
             {% endif %}
@@ -76,8 +76,8 @@
         </div>
 
         <div class="slide">
-            {% if product.get_accesories.on_slider.random.image.url %}
-                <img src="{{ product.get_accesories.on_slider.random.image.url }}" alt="">
+            {% if products.get_accesories.on_slider.random.image.url %}
+                <img src="{{ products.get_accesories.on_slider.random.image.url }}" alt="">
             {% else %}
                 <img src="{% static 'images/image_not_available.jpg' %}" alt="">
             {% endif %}
@@ -103,28 +103,43 @@
         <button class="arrows one" id="slide-left"><i class="fas fa-angle-left"></i></button>
 
         <div class="card-container" id="card-container">
-            <div class="card" id="card">
-                <div class="card-header">
-                    <img src="{% static 'images/jordan2.jpg' %}">
-                </div>
-                <div class="card-body">
-                    <h4 class="product-title">Jordan 13 Flint</h4>
-                    <p class="product-status">Ships in 3-4 days</p>
-                    <h3 class="product-price">$120.00</h3>
-                </div>
-                <div class="card-footer">
-                    <a href="#">
-                        <button class="card-btn btn-secondary">
-                            Info
-                        </button>
-                    </a>
-                    <a href="#">
-                        <button class="card-btn btn-primary">
-                            Pre-order
-                        </button>
-                    </a>
-                </div>
-            </div>
+
+            {% if products.on_preorder %}
+                {% for product in products %}
+                    <div class="card" id="card">
+                        <div class="card-header">
+                            <img src="{{ products.on_preorder.random.image.url }}">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="product-title">Jordan 13 Flint</h4>
+                            <p class="product-status">Ships in 3-4 days</p>
+                            <h3 class="product-price">$120.00</h3>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#"><button class="card-btn btn-secondary">Info</button></a>
+                            <a href="#"><button class="card-btn btn-primary">Pre-order</button></a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="card" id="card">
+                        <div class="card-header">
+                            <img src="{% static 'images/image_not_available.jpg' %}">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="product-title">Coming soon</h4>
+                            <p class="product-status">-</p>
+                            <h3 class="product-price">-</h3>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#"><button class="card-btn btn-secondary">-</button></a>
+                            <a href="#"><button class="card-btn btn-primary">-</button></a>
+                        </div>
+                    </div>
+
+            {% endif %}
+
+            
         </div>
     </div>
     

@@ -4,8 +4,8 @@ from django.shortcuts import render
 from products.models import Product
 
 def home_view(request):
-    product = Product.objects.all()
+    products = Product.objects.all()
     context = {
-        'product': product
+        'products': products
     }
     return render(request, "pages/home.html", context)
