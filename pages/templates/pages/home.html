@@ -105,15 +105,15 @@
         <div class="card-container" id="card-container">
 
             {% if products.on_preorder %}
-                {% for product in products %}
+                {% for product in products.on_preorder %}
                     <div class="card" id="card">
                         <div class="card-header">
-                            <img src="{{ products.on_preorder.random.image.url }}">
+                            <img src="{{ product.image.url }}">
                         </div>
                         <div class="card-body">
-                            <h4 class="product-title">Jordan 13 Flint</h4>
-                            <p class="product-status">Ships in 3-4 days</p>
-                            <h3 class="product-price">$120.00</h3>
+                            <h4 class="product-title">{{ product.title }}</h4>
+                            <p class="product-status">Free Shipping</p>
+                            <h3 class="product-price">{{ product.price}}</h3>
                         </div>
                         <div class="card-footer">
                             <a href="#"><button class="card-btn btn-secondary">Info</button></a>
@@ -123,20 +123,19 @@
                 {% endfor %}
             {% else %}
                 <div class="card" id="card">
-                        <div class="card-header">
-                            <img src="{% static 'images/image_not_available.jpg' %}">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="product-title">Coming soon</h4>
-                            <p class="product-status">-</p>
-                            <h3 class="product-price">-</h3>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#"><button class="card-btn btn-secondary">-</button></a>
-                            <a href="#"><button class="card-btn btn-primary">-</button></a>
-                        </div>
+                    <div class="card-header">
+                        <img src="{% static 'images/image_not_available.jpg' %}">
                     </div>
-
+                    <div class="card-body">
+                        <h4 class="product-title">Coming soon</h4>
+                        <p class="product-status">-</p>
+                        <h3 class="product-price">-</h3>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#"><button class="card-btn btn-secondary">-</button></a>
+                        <a href="#"><button class="card-btn btn-primary">-</button></a>
+                    </div>
+                </div>
             {% endif %}
 
             
@@ -166,20 +165,59 @@
 
         <div class="card-container" id="card-container">
             
-            <div class="card" id="card">
+            {% if products.on_new %}
+                {% for product in products.on_new %}
+                    <div class="card" id="card">
+                        <div class="card-header">
+                            <img src="{{ product.image.url }}">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="product-title">{{ product.title }}</h4>
+                            <p class="product-status">Free shipping</p>
+                            <h3 class="product-price">{{ product.price }}</h3>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#"><button class="card-btn btn-secondary">Info</button></a>
+                            <a href="#"><button class="card-btn btn-primary">Add to cart</button></a>
+                        </div>
+                    </div>
+                {% endfor%}
+            {% else %}
+                <div class="card" id="card">
+                    <div class="card-header">
+                        <img src="{% static 'images/image_not_available.jpg' %}">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="product-title">Coming soon</h4>
+                        <p class="product-status">-</p>
+                        <h3 class="product-price">-</h3>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#"><button class="card-btn btn-secondary">-</button></a>
+                        <a href="#"><button class="card-btn btn-primary">-</button></a>
+                    </div>
+                </div>
+           {% endif %}
+
+        </div>
+    </div>
+
+    <div class="card-off">
+        <h2 class="banner-off">Special offers from the last collection</h2>
+        <button class="arrows one" id="slide-left"><i class="fas fa-angle-left"></i></button>
+    <div class="card-container" id="card-container">
+    
+    {% if products.on_offer %}
+        {% for product in products.on_offer %}
+            <div class="card" id="card">        
                 <div class="card-header">
-                    <img src="{% static 'images/jordantee1.jpg' %}">
+                    <img src="{{ product.image.url }}">
                 </div>
                 <div class="card-body">
-                    <h4 class="product-title">
-                        Supreme Jordan Tee
-                    </h4>
-                    <p class="product-status">
-                        Ships in 3-4 days
-                    </p>
-                    <h3 class="product-price">
-                        $300.00
-                    </h3>
+                    <h4 class="product-title">Yeezy Boost 350 v2 Zebra</h4>
+                    <p class="product-status">Ships in 3-4 days</p>
+                    <h3 class="product-oldprice">$460.00</h3>
+                    <h3 class="product-newprice">$375.00</h3>
                 </div>
                 <div class="card-footer">
                     <a href="#">
@@ -194,87 +232,23 @@
                     </a>
                 </div>
             </div>
-            
+        {% endfor %}
+    {% else %}
+        <div class="card" id="card">
+            <div class="card-header">
+                <img src="{% static 'images/image_not_available.jpg' %}">
+            </div>
+            <div class="card-body">
+                <h4 class="product-title">Coming soon</h4>
+                <p class="product-status">-</p>
+                <h3 class="product-price">-</h3>
+            </div>
+            <div class="card-footer">
+                <a href="#"><button class="card-btn btn-secondary">-</button></a>
+                <a href="#"><button class="card-btn btn-primary">-</button></a>
+            </div>
         </div>
-    </div>
-
-    <div class="card-off">
-        <h2 class="banner-off">Special offers from the last collection</h2>
-        <button class="arrows one" id="slide-left"><i class="fas fa-angle-left"></i></button>
-    <div class="card-container" id="card-container">
-    
-    <div class="card" id="card">
-    
-        <div class="card-header">
-            <img src="{% static 'images/yeezy1.jpg' %}">
-        </div>
-        <div class="card-body">
-            <h4 class="product-title">Yeezy Boost 350 v2 Zebra</h4>
-            <p class="product-status">Ships in 3-4 days</p>
-            <h3 class="product-oldprice">$460.00</h3>
-            <h3 class="product-newprice">$375.00</h3>
-        </div>
-        <div class="card-footer">
-            <a href="#">
-                <button class="card-btn btn-secondary">
-                    Info
-                </button>
-            </a>
-            <a href="#">
-                <button class="card-btn btn-primary">
-                    Add to cart
-                </button>
-            </a>
-        </div>
-    </div>
-    <div class="card" id="card">
-    
-    <div class="card-header">
-        <img src="{% static 'images/fogtee1.jpg' %}">
-    </div>
-    <div class="card-body">
-        <h4 class="product-title">FEAR OF GOD 6th Collection</h4>
-        <p class="product-status">Ships in 3-4 days</p>
-        <h3 class="product-oldprice">$208.00</h3>
-        <h3 class="product-newprice">$108.00</h3>
-    </div>
-    <div class="card-footer">
-        <a href="#">
-            <button class="card-btn btn-secondary">
-                Info
-            </button>
-        </a>
-        <a href="#">
-            <button class="card-btn btn-primary">
-                Add to cart
-            </button>
-        </a>
-    </div>
-    </div>
-    <div class="card" id="card">
-    
-        <div class="card-header">
-            <img src="{% static 'images/kithtee1.jpg' %}">
-        </div>
-        <div class="card-body">
-            <h4 class="product-title">Kith Moncler Tee</h4>
-            <p class="product-status">Ships in 3-4 days</p>
-            <h3 class="product-oldprice">$422.00</h3>
-            <h3 class="product-newprice">$235.00</h3>
-        </div>
-        <div class="card-footer">
-            <a href="#">
-                <button class="card-btn btn-secondary">
-                    Info
-                </button>
-            </a>
-            <a href="#">
-                <button class="card-btn btn-primary">
-                    Add to cart
-                </button>
-            </a>
-        </div>
-    </div>
+    {% endif %}
 
     </div>
     </div>
