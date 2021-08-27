@@ -10,6 +10,9 @@ class CustomQuerySet(QuerySet):
     def on_preorder(self):
         return self.filter(preview='preorder')
 
+    def on_new(self):
+        return self.filter(preview='new')
+
     def get_accesories(self):
         return self.filter(category='accesory')
 
@@ -27,6 +30,8 @@ class CustomQuerySet(QuerySet):
 
     def get_tshirts(self):
         return self.filter(category='t-shirt')
+
+
 
 
     #Esta funcion devuelve un producto aleatorio de la lista de productos del queryset
