@@ -2,6 +2,7 @@ PREVIEW_CHOICES = [
     ('slider', 'Slider'),
     ('pre-order', 'Pre-order'),
     ('new', 'New'),
+    ('offer', 'Offer'),
     ('hidden', 'Hidden'),
 ]
 

@@ -12,6 +12,9 @@ class CustomQuerySet(QuerySet):
 
     def on_new(self):
         return self.filter(preview='new')
+    
+    def on_offer(self):
+        return self.filter(preview='offer')
 
     def get_accesories(self):
         return self.filter(category='accesory')
