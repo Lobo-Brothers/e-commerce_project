@@ -31,9 +31,6 @@ class CustomQuerySet(QuerySet):
     def get_tshirts(self):
         return self.filter(category='t-shirt')
 
-
-
-
     #Esta funcion devuelve un producto aleatorio de la lista de productos del queryset
     def random(self):
         random = self
