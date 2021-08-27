@@ -174,7 +174,7 @@
                         <div class="card-body">
                             <h4 class="product-title">{{ product.title }}</h4>
                             <p class="product-status">Free shipping</p>
-                            <h3 class="product-price">{{ product.price }}</h3>
+                            <h3 class="product-price">${{ product.price }}</h3>
                         </div>
                         <div class="card-footer">
                             <a href="#"><button class="card-btn btn-secondary">Info</button></a>
@@ -214,10 +214,10 @@
                     <img src="{{ product.image.url }}">
                 </div>
                 <div class="card-body">
-                    <h4 class="product-title">Yeezy Boost 350 v2 Zebra</h4>
-                    <p class="product-status">Ships in 3-4 days</p>
-                    <h3 class="product-oldprice">$460.00</h3>
-                    <h3 class="product-newprice">$375.00</h3>
+                    <h4 class="product-title">{{ product.title }}</h4>
+                    <p class="product-status">Free shipping</p>
+                    <h3 class="product-oldprice">$</h3>
+                    <h3 class="product-newprice">{{ product.price}}</h3>
                 </div>
                 <div class="card-footer">
                     <a href="#">
