@@ -8,7 +8,7 @@ class CustomQuerySet(QuerySet):
         return self.filter(preview='slider')
 
     def on_preorder(self):
-        return self.filter(preview='preorder')
+        return self.filter(preview='pre-order')
 
     def on_new(self):
         return self.filter(preview='new')
